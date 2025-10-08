@@ -1,8 +1,7 @@
-//your JS code here. If required.
 (function () {
   const form = document.getElementById("login-form");
-  const username = document.getElementById("username");
-  const password = document.getElementById("password");
+  const usernameInput = document.getElementById("username");
+  const passwordInput = document.getElementById("password");
   const rememberCheckbox = document.getElementById("checkbox");
   const existingBtn = document.getElementById("existing");
 
@@ -16,8 +15,8 @@
 
   window.addEventListener("DOMContentLoaded", () => {
     // Ensure initial expectations: empty fields & unchecked checkbox
-    username.value = "";
-    password.value = "";
+    usernameInput.value = "";
+    passwordInput.value = "";
     rememberCheckbox.checked = false;
     updateExistingVisibility();
   });
@@ -25,8 +24,8 @@
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const username = username.value.trim();
-    const password = password.value;
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value;
 
     alert(Logged in as ${username});
 
