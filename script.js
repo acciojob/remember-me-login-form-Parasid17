@@ -27,7 +27,7 @@
     const username = usernameInput.value.trim();
     const password = passwordInput.value;
 
-    alert(Logged in as ${username});
+    alert(`Logged in as ${username}`);
 
     if (rememberCheckbox.checked) {
       localStorage.setItem("username", username);
@@ -43,7 +43,7 @@
   existingBtn.addEventListener("click", () => {
     const savedUsername = localStorage.getItem("username");
     if (savedUsername) {
-      alert(Logged in as ${savedUsername});
+      alert(`Logged in as ${savedUsername}`);
     }
   });
 })();
